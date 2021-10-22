@@ -72,9 +72,10 @@ npm install
 npm run build
 ```
 
-2.1 tools
-2.2 packages
-2.3 applications
+2.1 root folder
+2.2 tools
+2.3 packages
+2.4 applications
 
 3. Run
 

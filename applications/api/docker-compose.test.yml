@@ -1,0 +1,5 @@
+services:
+  library-api:
+    command: npm test
+    environment:
+      - NODE_ENV=test

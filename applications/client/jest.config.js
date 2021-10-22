@@ -1,0 +1,36 @@
+module.exports = {
+	roots: ["<rootDir>"],
+	cacheDirectory: ".jest-cache",
+	coverageDirectory: ".jest-coverage",
+	collectCoverage: true,
+	collectCoverageFrom: ["./src/**/*.js", "!**/node_modules/**", "!**/__tests__/**"],
+	coverageThreshold: {
+		global: {
+			branches: 80,
+			functions: 80,
+			lines: 80,
+			statements: 80,
+		},
+	},
+	coverageReporters: ["html-spa", "json", "json-summary", "text", "lcov", "clover"],
+	setupFiles: ["react-app-polyfill/jsdom"],
+	setupFilesAfterEnv: ["<rootDir>/configs/jest/setupTests.js"],
+	testMatch: ["<rootDir>/src/**/*.spec.js"],
+	testEnvironment: "jsdom",
+	testRunner: "jest-circus/runner.js",
+	transform: {
+		"^.+\\.(js|mjs|cjs)$": "<rootDir>/configs/jest/babelTransform.js",
+		"^.+\\.scss$": "<rootDir>/configs/jest/cssTransform.js",
+	},
+	moduleNameMapper: {
+		"^react$": "<rootDir>/node_modules/react/index.js",
+	},
+	transformIgnorePatterns: ["[/\\\\]node_modules[/\\\\].+\\.(js|mjs|cjs)$"],
+	moduleFileExtensions: ["web.js", "js", "json", "node"],
+	watchPlugins: ["jest-watch-typeahead/filename", "jest-watch-typeahead/testname"],
+	resetMocks: true,
+	clearMocks: true,
+	resetModules: true,
+	automock: false,
+	timers: "fake",
+};

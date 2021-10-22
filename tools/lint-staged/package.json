@@ -1,0 +1,23 @@
+{
+	"name": "@library/lint-staged",
+	"version": "0.1.0",
+	"description": "Shared Lint Staged Configurations",
+	"main": "index.js",
+	"author": {
+		"email": "david.hayki.ghulijanyan@gmail.com",
+		"name": "David Ghulijanyan"
+	},
+	"license": "UNLICENSED",
+	"files": [
+		"base.js",
+		"index.js"
+	],
+	"keywords": [
+		"shared",
+		"lint-staged",
+		"configuration"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	}
+}

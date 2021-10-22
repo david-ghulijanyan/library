@@ -1,0 +1,68 @@
+{
+	"name": "@library/components",
+	"version": "0.1.0",
+	"description": "Components",
+	"main": "dist/cjs/index.js",
+	"module": "dist/esm/index.js",
+	"private": false,
+	"author": {
+		"email": "david.hayki.ghulijanyan@gmail.com",
+		"name": "David Ghulijanyan"
+	},
+	"license": "UNLICENSED",
+	"engines": {
+		"node": ">=16.11.1",
+		"npm": ">=8.0.0"
+	},
+	"files": [
+		"dist"
+	],
+	"publishConfig": {
+		"registry": "http://localhost:4873"
+	},
+	"scripts": {
+		"build": "rimraf dist && npm run build:esm && npm run build:cjs",
+		"postbuild2": "npm run clean:dist",
+		"build:esm": "cross-env NODE_ENV=production BABEL_ENV=esm babel ./lib --copy-files --out-dir 'dist/esm' --source-maps --ignore 'node_modules,**/node_modules'",
+		"build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel ./lib --copy-files --out-dir 'dist/cjs' --source-maps --ignore 'node_modules,**/node_modules'",
+		"clean:dist": "rimraf $(find ./dist -regextype egrep -regex \".*/__snapshots__|.*/__tests__|.*.spec.js$|.*.test.js$\")",
+		"start": "node scripts/start.js",
+		"test": "node scripts/test.js"
+	},
+	"eslintConfig": {
+		"extends": [
+			"@library/eslint-config"
+		]
+	},
+	"prettier": "@library/prettier-config",
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"peerDependencies": {
+		"axios": "^0.23.0",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.15.7",
+		"@babel/core": "^7.15.8",
+		"@library/babel-preset": "file:../../tools/babel-preset",
+		"@library/eslint-config": "file:../../tools/eslint-config",
+		"@library/prettier-config": "file:../../tools/prettier-config",
+		"cross-env": "^7.0.3",
+		"rimraf": "^3.0.2"
+	},
+	"dependencies": {
+		"@mui/material": "^5.0.4",
+		"prop-types": "^15.7.2"
+	}
+}

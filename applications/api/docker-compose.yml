@@ -1,0 +1,24 @@
+services:
+  library-api:
+    build: .
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/library
+    volumes:
+      - .:/app
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongodb
+    networks:
+      - library-api-network
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - library-api-network
+
+networks:
+  library-api-network:
+    driver: bridge

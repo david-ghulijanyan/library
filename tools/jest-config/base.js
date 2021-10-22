@@ -1,0 +1,32 @@
+module.exports = {
+	roots: ["<rootDir>/applications", "<rootDir>/packages", "<rootDir>/modules"],
+	cacheDirectory: ".jest-cache",
+	coverageDirectory: ".jest-coverage",
+	collectCoverage: true,
+	collectCoverageFrom: ["**/*.{js}", "!**/node_modules/**", "!**/__tests__/**"],
+	coverageThreshold: {
+		global: {
+			branches: 80,
+			functions: 80,
+			lines: 80,
+			statements: 80,
+		},
+	},
+	coverageReporters: ["html-spa", "json"],
+	// setupFiles: ["react-app-polyfill/jsdom"],
+	setupFilesAfterEnv: ["<rootDir>/config/jest/setupTests.js"],
+	testMatch: ["<rootDir>/src/**/__tests__/**/*.js", "<rootDir>/src/**/*.spec.js"],
+	testEnvironment: "jsdom",
+	testRunner: "jest-circus/runner.js",
+	transform: {
+		"^.+\\.(js|mjs|cjs)$": "<rootDir>/config/jest/babelTransform.js",
+		"^.+\\.scss$": "<rootDir>/config/jest/cssTransform.js",
+	},
+	transformIgnorePatterns: ["[/\\\\]node_modules[/\\\\].+\\.(js|mjs|cjs)$"],
+	moduleFileExtensions: ["web.js", "js", "json", "node"],
+	watchPlugins: ["jest-watch-typeahead/filename", "jest-watch-typeahead/testname"],
+	resetMocks: true,
+	clearMocks: true,
+	resetModules: false,
+	timers: "fake",
+};

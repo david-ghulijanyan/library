@@ -1,0 +1,5 @@
+services:
+  library-api:
+    command: npm run dev
+    environment:
+      - NODE_ENV=development

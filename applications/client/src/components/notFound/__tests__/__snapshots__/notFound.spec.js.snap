@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound component Should render properly with 404 error code 1`] = `
+<div>
+  <div
+    class="error"
+  >
+    <h1>
+      Error: 
+    </h1>
+    <p
+      class="error-code"
+    >
+      404
+       
+    </p>
+    <p
+      class="error-message"
+    >
+      Page not found!
+       
+    </p>
+    <div
+      class="error-actions"
+    >
+      <span>
+        Please, 
+      </span>
+      <button
+        class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
+      >
+        go back
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+      <span>
+         or 
+      </span>
+      <button
+        class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
+      >
+        go to home page
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NotFound component Should render properly with 500 error code 1`] = `
+<div>
+  <div
+    class="error"
+  >
+    <h1>
+      Error: 
+    </h1>
+    <p
+      class="error-code"
+    >
+      500
+       
+    </p>
+    <p
+      class="error-message"
+    >
+      Internal server error
+       
+    </p>
+    <div
+      class="error-actions"
+    >
+      <span>
+        Please, 
+      </span>
+      <button
+        class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
+      >
+        go back
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+      <span>
+         or 
+      </span>
+      <button
+        class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
+      >
+        go to home page
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;

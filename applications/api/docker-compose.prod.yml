@@ -1,0 +1,5 @@
+services:
+  library-api:
+    command: npm start
+    environment:
+      - NODE_ENV=production

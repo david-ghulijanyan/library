@@ -1,0 +1,19 @@
+{
+	"name": "@library/eslint-config",
+	"version": "0.1.0",
+	"description": "Shared ESlint Configurations",
+	"main": "index.js",
+	"author": {
+		"email": "david.hayki.ghulijanyan@gmail.com",
+		"name": "David Ghulijanyan"
+	},
+	"license": "UNLICENSED",
+	"files": [
+		"base.js",
+		"index.js",
+		"jest.js"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	}
+}

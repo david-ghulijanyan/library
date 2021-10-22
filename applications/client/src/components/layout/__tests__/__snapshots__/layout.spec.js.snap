@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout component Should not render properly if no children provided 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-i9gxme"
+  >
+    <header
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-hip9hq-MuiPaper-root-MuiAppBar-root"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1t29gy6-MuiToolbar-root"
+      >
+        <div
+          class="MuiTypography-root MuiTypography-h6 MuiTypography-noWrap css-1futezt-MuiTypography-root"
+        >
+          Library
+        </div>
+        <div
+          class="MuiBox-root css-i9gxme"
+        />
+        <a
+          class="MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorInherit MuiButtonBase-root css-1y942vo-MuiButtonBase-root-MuiButton-root"
+          href="/signin"
+          tabindex="0"
+        >
+          Sing In
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </a>
+        <a
+          class="MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorInherit MuiButtonBase-root css-1y942vo-MuiButtonBase-root-MuiButton-root"
+          href="/signup"
+          tabindex="0"
+        >
+          Sign Up
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </a>
+      </div>
+    </header>
+  </div>
+  <main
+    class="MuiContainer-root MuiContainer-maxWidthLg main-wrapper css-1oqqzyl-MuiContainer-root"
+  />
+</div>
+`;
+
+exports[`Layout component Should render properly and match snapshot 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-i9gxme"
+  >
+    <header
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-hip9hq-MuiPaper-root-MuiAppBar-root"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1t29gy6-MuiToolbar-root"
+      >
+        <div
+          class="MuiTypography-root MuiTypography-h6 MuiTypography-noWrap css-1futezt-MuiTypography-root"
+        >
+          Library
+        </div>
+        <div
+          class="MuiBox-root css-i9gxme"
+        />
+        <a
+          class="MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorInherit MuiButtonBase-root css-1y942vo-MuiButtonBase-root-MuiButton-root"
+          href="/signin"
+          tabindex="0"
+        >
+          Sing In
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </a>
+        <a
+          class="MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorInherit MuiButtonBase-root css-1y942vo-MuiButtonBase-root-MuiButton-root"
+          href="/signup"
+          tabindex="0"
+        >
+          Sign Up
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </a>
+      </div>
+    </header>
+  </div>
+  <main
+    class="MuiContainer-root MuiContainer-maxWidthLg main-wrapper css-1oqqzyl-MuiContainer-root"
+  >
+    1
+  </main>
+</div>
+`;

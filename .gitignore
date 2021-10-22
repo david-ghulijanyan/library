@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log*
+.env2
+dist
+build
+*.log
+public/uploads/*
+.jest-cache
+.jest-coverage

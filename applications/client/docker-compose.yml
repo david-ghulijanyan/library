@@ -1,0 +1,13 @@
+services:
+  library-client:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8080"
+    networks:
+      - library-client-network
+
+networks:
+  library-client-network:
+    driver: bridge

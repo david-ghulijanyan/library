@@ -23,7 +23,7 @@ Library is fullstack demo application for storing articles;
 - [Prettier] - formatter
 - [Jest] - testing
 - [Lint-Staged] - linting before commit
-- [Commitlint] - convinient commit messages
+- [Commitlint] - conventional commit messages
 - [Husky] - git hooks
 - [ExpressJS] - used for API
 - [Docker] - containerization

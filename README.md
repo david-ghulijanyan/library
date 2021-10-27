@@ -1,4 +1,4 @@
-# Library
+# Library (will be deleted at 01.11.2021)
 
 Library is fullstack demo application for storing articles;
 
@@ -93,7 +93,7 @@ npm start
 
 ```sh
 cd applications/client
-npm teat
+npm test
 
 ```
 

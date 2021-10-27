@@ -103,7 +103,6 @@ npm test
 - Implmenet Docker
 - Add more tests
 - Fix design
-- Add user friendly notifications
 
 ## Known bugs
 

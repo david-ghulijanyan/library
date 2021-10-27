@@ -1,4 +1,4 @@
-# Library (will be deleted at 01.11.2021)
+# Library (will be delete on 01.11.2021)
 
 Library is fullstack demo application for storing articles;
 

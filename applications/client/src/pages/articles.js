@@ -49,19 +49,21 @@ const ArticlesPage = () => {
 
 		makeRequest();
 
-		if (filter === category) {
-			setHasMore(!(page > 1 && (!data || data.length < 3)));
-
-			if (data && data.length > 0) {
-				const oldData = articles || [];
-				setArticles([...oldData, ...data]);
-			}
-		} else {
+		if (filter !== category) {
 			setArticles(null);
 			setPage(1);
 			setFilter(category);
 		}
 	}, [page, category, query]);
+
+	useEffect(() => {
+		if (data && data.length > 0) {
+			const oldData = articles || [];
+			setArticles([...oldData, ...data]);
+		} else {
+			setHasMore(!(page > 1 && (!data || data.length < 3)));
+		}
+	}, [data]);
 
 	return (
 		<Layout hasFilters filters={<Articles.Filters onSearch={handleOnSearch} />}>

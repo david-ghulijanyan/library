@@ -12,8 +12,8 @@ Library is fullstack demo application for storing articles;
 
 ## Technologies
 
-- [NodeJS] >= 16
-- [NPM] >= 8
+- [NodeJS] >= 16.13.0
+- [NPM] >= 8.1.0
 - [React] - js library for ui
 - [SASS] - style sheets
 - [MUI] - ui component library
@@ -63,19 +63,11 @@ Library is fullstack demo application for storing articles;
 
 0. Mongodb should be installed for API [https://www.mongodb.com/] (docker not configured yet)
 1. clone git [https://github.com/david-ghulijanyan/library.git] repository
-2. Due to problems some problems with npm command npm install --workspaces does not work properly. [https://github.com/npm/cli/issues/3847] (https://github.com/npm/cli/issues/3901)
-
-So, please install all deps manuallly and build them in current order because of packages have not published to npm registry.
+2. Install deps
 
 ```sh
 npm install
-npm run build
 ```
-
-2.1 root folder
-2.2 tools
-2.3 packages
-2.4 applications
 
 3. Run
 
@@ -115,8 +107,6 @@ npm teat
 
 ## Known bugs
 
-- You need to login twice to log in
-- Doubles articles in list
 - See more button
 
 # Some Notes

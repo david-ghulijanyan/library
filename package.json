@@ -13,8 +13,8 @@
 		"tools/*"
 	],
 	"engines": {
-		"node": ">=16.11.1",
-		"npm": ">=8.0.0"
+		"node": ">=16.13.0",
+		"npm": ">=8.1.0"
 	},
 	"scripts": {
 		"prepare": "husky install && npm run build --workspace=packages --if-present && npm run build --workspace=applications --if-present"

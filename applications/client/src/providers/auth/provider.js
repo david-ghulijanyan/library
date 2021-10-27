@@ -9,7 +9,7 @@ import AuthContext from "./context";
 const AuthProvider = ({ children, apiUrl }) => {
 	const localStorageService = LocalStorageService.instance;
 
-	const [user, setUser] = useState(localStorageService.user ? JSON.parse(localStorageService.user) : null);
+	const [user, setUser] = useState(null);
 
 	const {
 		data: signInData,
@@ -41,33 +41,34 @@ const AuthProvider = ({ children, apiUrl }) => {
 		method: "POST",
 	});
 
-	const handleSignIn = async ({ email, password }) => {
-		await singIn({ email, password });
-		if (signInData && !signInError) {
-			localStorageService.item("user", JSON.stringify(signInData.token));
-			setUser(signInData.token);
-		} else {
-			// error handle
-		}
+	const handleSignIn = ({ email, password }) => {
+		singIn({ email, password });
 	};
 
-	const handleSignUp = async ({ email, password }) => {
-		await singUp({ email, password });
-		if (signUpData && !signUpError) {
-			localStorageService.item("user", JSON.stringify(signUpData.token));
-			setUser(signUpData.token);
-		} else {
-			// error handle
-		}
+	const handleSignUp = ({ email, password }) => {
+		singUp({ email, password });
 	};
 
-	const handleSignOut = async () => {
+	const handleSignOut = () => {
 		setUser(null);
 		localStorageService.clear("user");
-		await singOut();
+		singOut();
 	};
 
 	useEffect(() => {
+		let userData = localStorageService.user ? JSON.parse(localStorageService.user) : null;
+		if (!userData) {
+			if (signInData && !signInError) {
+				userData = signInData.token;
+			}
+			if (signUpData && !signUpError) {
+				userData = signUpData.token;
+			}
+		}
+
+		localStorageService.item("user", JSON.stringify(userData));
+		setUser(userData);
+
 		const interceptor = axios.interceptors.request.use(
 			config => {
 				if (user && user.accessToken) {
@@ -97,7 +98,7 @@ const AuthProvider = ({ children, apiUrl }) => {
 		return () => {
 			axios.interceptors.request.eject(interceptor);
 		};
-	}, [user]);
+	}, [signInData, signUpData]);
 
 	const context = {
 		signIn: handleSignIn,
